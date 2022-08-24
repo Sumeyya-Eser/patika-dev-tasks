@@ -62,3 +62,26 @@ Yukarıdaki açıklamaya göre 18 sayısı dizinin ortasında bulunduğu için A
 [8,11,12,16,21,22]
 
 Big-O gösterimi: O(n.logn)
+
+## [7, 5, 1, 8, 3, 6, 0, 9, 4, 2] --> Binary-Search-Tree
+
+           7
+         /  \
+        5    8
+       / \    \
+      1   6    9
+     / \
+    0   3
+       / \
+      2   4 
+      
+
+5<7;  7 nin soluna yazılır
+1<5; 5 in soluna yazılır
+8>7; 7 nin sağına yazılır
+3>1; 1 in sağına yazılır
+6>5; 5 in sağına yazılır
+0<1; 1 in soluna yazılır
+9>8; 8 in sağına yazılır
+4<5; 5 in soluna yazılır
+2>1; 1 in sağına yazılır
