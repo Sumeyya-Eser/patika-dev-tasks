@@ -46,3 +46,19 @@ Yukarıdaki açıklamaya göre 18 sayısı dizinin ortasında bulunduğu için A
 3. [3,5,7,2,8,9,4,15,6] 8 kendini 7 ile kıyaslar, daha büyük olduğu için yerinde kalır. sonra 2 ile kendini kıyaslar. 2 daha küçük olduğu için yer değiştirir.
 
 4. [2,3,5,7,8,9,4,15,6] 2 kendini 7 ile kıyaslar, 2 daha küçük olduğu için önce 7 ile yer değiştirir. Sonra kendisini 5 ile kıyaslar, ondan da küçük olduğu için yer değiştirir. Sonra kendini 3 ile kıyaslar ve onunla da yer değiştirir.
+
+
+## [16,21,11,8,12,22] -> Merge Sort
+
+
+[16,21,11] [8,12,22]
+
+[16,21] [11] [8,12] [22]
+
+[16] [21] [11] [8] [12] [22]
+
+[11,16,21] [8,12,22]
+
+[8,11,12,16,21,22]
+
+Big-O gösterimi: O(n.logn)
