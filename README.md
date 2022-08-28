@@ -85,3 +85,10 @@ Big-O gösterimi: O(n.logn)
 9>8; 8 in sağına yazılır
 4<5; 5 in soluna yazılır
 2>1; 1 in sağına yazılır
+
+# SQL HOMEWORK 1
+SELECT title, description FROM film;
+SELECT * FROM film WHERE length>60 AND length<75;
+SELECT * FROM film WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99;
+SELECT last_name FROM customer WHERE first_name = 'Mary'; --Smith
+SELECT * FROM film WHERE NOT (length > 50 AND rental_rate = 2.99 OR rental_rate = 4.99);
