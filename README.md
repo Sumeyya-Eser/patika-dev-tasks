@@ -103,3 +103,10 @@ Big-O gösterimi: O(n.logn)
 2. SELECT * FROM country WHERE country LIKE '_____%n';
 3. SELECT * FROM film WHERE title ILIKE '%T%T%T%T%';
 4. SELECT rental_rate FROM film WHERE title ILIKE 'C%' AND length >90 AND rental_rate = 2.99;
+
+# SQL HOMEWORK 4
+1. SELECT DISTINCT replacement_cost from film;
+2. SELECT COUNT(DISTINCT replacement_cost) from film;
+3. SELECT COUNT(*) FROM film WHERE title LIKE 'T%' AND rating = 'G';
+4. SELECT COUNT(*) FROM country WHERE country LIKE '_____';
+5. SELECT COUNT(*) FROM city WHERE city LIKE 'R%r';
