@@ -110,3 +110,19 @@ Big-O gösterimi: O(n.logn)
 3. SELECT COUNT(*) FROM film WHERE title LIKE 'T%' AND rating = 'G';
 4. SELECT COUNT(*) FROM country WHERE country LIKE '_____';
 5. SELECT COUNT(*) FROM city WHERE city LIKE 'R%r';
+
+# SQL HOMEWORK 5
+1. SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length DESC
+LIMIT 5;
+
+2. SELECT * FROM film
+WHERE title LIKE '%n'
+ORDER BY length 
+OFFSET 5
+LIMIT 5;
+
+3. SELECT * FROM customer
+WHERE store_id = 1
+ORDER BY last_name DESC;
