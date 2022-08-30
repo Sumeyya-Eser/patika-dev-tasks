@@ -86,32 +86,32 @@ Big-O gösterimi: O(n.logn)
 4<5; 5 in soluna yazılır
 2>1; 1 in sağına yazılır
 
-# SQL HOMEWORK 1
+# SQL  1
 1. SELECT title, description FROM film;
 2. SELECT * FROM film WHERE length>60 AND length<75;
 3. SELECT * FROM film WHERE rental_rate = 0.99 AND replacement_cost = 12.99 OR replacement_cost = 28.99;
 4. ELECT last_name FROM customer WHERE first_name = 'Mary'; --Smith
 5. SELECT * FROM film WHERE NOT (length > 50 AND rental_rate = 2.99 OR rental_rate = 4.99);
 
-# SQL HOMEWORK 2
+# SQL  2
 1. SELECT * FROM film WHERE replacement_cost BETWEEN 12.99 AND 16.99;
 2. SELECT first_name, last_name FROM actor WHERE first_name IN ('Penelope', 'Nick', 'Ed');
 3. SELECT * FROM film WHERE rental_rate IN (0.99, 2.99, 4.99) AND replacement_cost IN (12.99, 15.99, 28.99);
 
-# SQL HOMEWORK 3
+# SQL  3
 1. SELECT * FROM country WHERE country LIKE 'A%a';
 2. SELECT * FROM country WHERE country LIKE '_____%n';
 3. SELECT * FROM film WHERE title ILIKE '%T%T%T%T%';
 4. SELECT rental_rate FROM film WHERE title ILIKE 'C%' AND length >90 AND rental_rate = 2.99;
 
-# SQL HOMEWORK 4
+# SQL  4
 1. SELECT DISTINCT replacement_cost from film;
 2. SELECT COUNT(DISTINCT replacement_cost) from film;
 3. SELECT COUNT(*) FROM film WHERE title LIKE 'T%' AND rating = 'G';
 4. SELECT COUNT(*) FROM country WHERE country LIKE '_____';
 5. SELECT COUNT(*) FROM city WHERE city LIKE 'R%r';
 
-# SQL HOMEWORK 5
+# SQL  5
 1. SELECT * FROM film
 WHERE title LIKE '%n'
 ORDER BY length DESC
@@ -127,13 +127,13 @@ LIMIT 5;
 WHERE store_id = 1
 ORDER BY last_name DESC;
 
-# SQL HOMEWORK 6
+# SQL  6
 1. SELECT ROUND(AVG(rental_rate),2) FROM film;
 2. SELECT COUNT(*) FROM film WHERE title LIKE 'C%';
 3. SELECT MAX(length) FROM film WHERE rental_rate = 0.99;
 4. SELECT COUNT(DISTINCT replacement_cost ) FROM film WHERE length > 150;
 
-# SQL HOMEWORK 7
+# SQL  7
 1. SELECT rating, COUNT(*) FROM film
 GROUP BY rating;
 
@@ -148,7 +148,7 @@ GROUP BY store_id;
 GROUP BY country_id
 ORDER BY count DESC; --44 & 60
 
-# SQL HOMEWORK 9
+# SQL  9
 1. SELECT * FROM city
 INNER JOIN country ON country.country_id = city.country_id;
 
@@ -157,3 +157,13 @@ INNER JOIN payment ON payment.customer_id = customer.customer_id;
 
 3. SELECT rental_id, first_name, last_name FROM customer
 INNER JOIN rental ON rental.customer_id = customer.customer_id;
+
+# SQL 10
+1. SELECT city, country FROM city
+LEFT JOIN country ON country.country_id = city.country_id;
+
+2. SELECT payment_id, first_name, last_name FROM customer
+RIGHT JOIN payment ON payment.customer_id = customer.customer_id;
+
+3. SELECT rental_id, first_name, last_name FROM customer
+FULL JOIN rental ON rental.customer_id = customer.customer_id;
