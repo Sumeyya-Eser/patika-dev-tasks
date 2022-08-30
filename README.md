@@ -147,3 +147,13 @@ GROUP BY store_id;
 4. SELECT country_id, COUNT(*) FROM city
 GROUP BY country_id
 ORDER BY count DESC; --44 & 60
+
+# SQL HOMEWORK 9
+1. SELECT * FROM city
+INNER JOIN country ON country.country_id = city.country_id;
+
+2. SELECT payment_id, first_name, last_name FROM customer
+INNER JOIN payment ON payment.customer_id = customer.customer_id;
+
+3. SELECT rental_id, first_name, last_name FROM customer
+INNER JOIN rental ON rental.customer_id = customer.customer_id;
