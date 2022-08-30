@@ -179,3 +179,22 @@ INTERSECT (ALL)
 3. (SELECT first_name FROM actor)
 EXCEPT (ALL)
 (SELECT first_name FROM customer);
+
+# SQL 12
+1. SELECT COUNT(*) FROM film
+WHERE length > (SELECT AVG(length) from film);
+
+2. SELECT COUNT(rental_rate) FROM film
+WHERE rental_rate = (SELECT MAX(rental_rate) from film);
+
+3. SELECT rental_rate, replacement_cost from film
+WHERE rental_rate = (SELECT MIN(rental_rate) from film) AND
+replacement_cost = (SELECT MIN(replacement_cost) from film);
+
+4. SELECT first_name, last_name FROM customer
+JOIN payment ON payment.customer_id = ANY
+(SELECT customer_id from payment
+GROUP BY customer_id
+ORDER BY COUNT(customer_id) DESC
+LIMIT 5)
+LIMIT 5;
